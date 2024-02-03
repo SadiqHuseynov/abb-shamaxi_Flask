@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="https://abb-bank.az/storage/uploads/files/1595853377_ibainnovation_268x335-03.webp">
+    <title>{% block title %}{% endblock title %}</title>
+  </head>
+  <body class="bg-white">
+    <div class="hidden-header py-2">
+        <div class="row mx-4">
+            <div class="col-md-7 d-flex justify-content-between align-items-center">
+                <a href="">Tender elanları</a>
+                <a href="">Haqqımızda</a>
+                <a href="">Tariflər və Standart şərtlər</a>
+                <a href="">Xəbərlər</a>
+                <a href="">Xidmət şəbəkəsi</a>
+                <a href="">Onlayn xidmətlər</a>
+                <a href="" class="btn btn-outline-primary career-portal align-items-center py-1">Karyera portalı</a>
+            </div>
+            <div class="col-md-2 ml-auto d-flex justify-content-around align-items-center" style="z-index: 9999;">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Axtarış</a>
+                <li class="nav-item dropdown" style="list-style: none;">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">AZ</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"><img width="30" src="https://static.vecteezy.com/system/resources/thumbnails/005/416/914/small/flag-of-united-kingdom-illustration-free-vector.jpg" alt=""> EN</a>
+                        <a class="dropdown-item" href="#"><img width="30" src="https://www.countryflags.com/wp-content/uploads/russia-flag-png-xl.png" alt=""> RU</a>
+                    </div>
+                </li>
+                <a href="tel:937"><i class="fa-solid fa-phone"></i> 937</a>
+            </div>
+        </div>
+    </div>
+    <div class="sticky-top bg-white shadow-sm">
+        <div class="row border-bottom py-3 mx-1">
+            <div class="col-md-3 d-flex justify-content-around align-items-center">
+                <a href="/"><img width="100" src="https://abb-bank.az/img/logo.svg" alt=""></a>
+                <div>
+                    <a href="">Fərdi</a> /
+                    <a class="text-muted" href="">Korporativ</a> /
+                    <a class="text-muted" href="">KOB</a>
+                </div>
+            </div>
+            <div class="col-md-2 ml-auto d-flex align-items-center">
+                <a href=""><i class="fa-solid fa-arrows-rotate"></i> İnternet bankçılıq</a>
+            </div>
+        </div>
+        <div class="row mx-3 py-4">
+            <div id="links" class="col-md-8 d-flex justify-content-around">
+                <a id="menu1Hover" href="{{ url_for('credits') }}">Kreditlər</a>
+                <a href="">İpoteka</a>
+                <a id="menu2Hover" href="">Əmanətlər</a>
+                <a href="{{ url_for('cards') }}">Kartlar</a>
+                <a id="menu3Hover" href="">Pul köçürmələri</a>
+                <a href="">Cari Hesab</a>
+                <a id="menu4Hover" href="">Elektron xidmətlər</a>
+                <a href="">Bank 24/7</a>
+                <a id="menu5Hover" href="">Keşbek</a>
+                <a href="{{ url_for('company') }}">Kampaniyalar</a>
+            </div>
+        </div>
+        <div class="showMenu" id="menu1" style="display: none">
+            <div class="container-fluid mx-5 py-4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="d-flex flex-column">
+                                    <a href="">Online kredit al</a>
+                                    <a href="">Avtomobil krediti</a>
+                                    <a href="">Emanetci nagd krediti</a>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="d-flex flex-column">
+                                    <a href="">Nagd kredit</a>
+                                    <a href="">Emanetci kredit limti</a>
+                                        <a href="">Kart uzre kredit limiti</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row d-flex align-items-center">
+                            <img  src="https://abb-bank.az/storage/uploads/1596884229_Kredit_sub_iba.webp">
+                            <div class="ml-5">
+                                <h2>Onlayn kredit sifarisi</h2>
+                                <p>Butun ehtiyyaclariniz ucun nagd pul krediti</p>
+                                <button class="btn btn-outline-secondary px-3 py-2">Daha etrafli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="showMenu" id="menu2" style="display: none">
+            <div class="container-fluid mx-5 py-4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="d-flex flex-column">
+                                    <a href="">"Klassik" emaneti</a>
+                                    <a href="">Emanetli ipoteka krediti</a>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="d-flex flex-column">
+                                    <a href="">Emanetlerin sigortalanmasi</a>
+                                    <a href="">Depozit seyfi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="showMenu" id="menu3" style="display: none">
+            <div class="container-fluid mx-5 py-4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="d-flex flex-column">
+                                    <a href="">Valyuta tenzimlenmesi</a>
+                                    <a href="">Tecili pul kocurmeleri</a>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="d-flex flex-column">
+                                    <a href="">Hesabdan kocurmeler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="showMenu" id="menu4" style="display: none">
+            <div class="container-fluid mx-5 py-4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="d-flex flex-column">
+                                    <a href="">NFC ile emeliyyatlar</a>
+                                    <a href="">Karta pul yatirin</a>
+                                    <a href="">Kart sifaris edin</a>
+                                    <a href="">R@ndevu</a>
+                                    <a href="">Xidmet haqqlarini odeyin</a>
+                                    <a href="">3D Secure</a>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="d-flex flex-column">
+                                    <a href="">Qatarlara temassiz kecid</a>
+                                    <a href="">Kartdan pul kocurun</a>
+                                    <a href="">SMS xeberdarliq</a>
+                                    <a href="">Pin kodunuzu deyisin</a>
+                                    <a href="">Kreditinizi odeyin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-md-6">
+                                <img src="https://abb-bank.az/storage/uploads/files/1596893771_randevu_iba_yeni_site.webp">
+                            </div>
+                            <div class="col-md-6">    
+                                <div>
+                                    <h3>Randevu xidmetimizden yararlanin</h3>
+                                    <p>Banka gəlməmişdən bir gün əvvəl müraciət edərək görüş vaxtını özünüz təyin edin</p>
+                                    <button class="btn btn-outline-secondary px-3 py-2">Daha etrafli</button>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="showMenu" id="menu5" style="display: none">
+            <div class="container-fluid mx-5 py-4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="d-flex flex-column">
+                                    <a href="">Faydali kesbek</a>
+                                    <a href="">Avtomatik endirim</a>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="d-flex flex-column">
+                                    <a href="">QaygiCash kulubu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    
+    {% block content %}
+        
+    {% endblock content %}
+        
+    <hr>
+    <!-- Shahmar -->
+    <div class="container">
+        <div class="d-flex justify-content-between py-2">
+            <a href=""><img width="90" src="https://abb-bank.az/img/logo.svg"></a>
+            <a href=""><i class="fa-solid fa-arrows-rotate"></i> İnternet bankçılıq</a>
+        </div>
+    </div>
+    <!-- --- -->
+    <div style="background-color: #F9F9F9;" class="pt-4 footer">
+        <div class="py-3 mx-auto" style="max-width: 1290px;">
+            <div class="row mx-auto">
+                <div class="col d-flex flex-column">
+                    <h6 class="mb-3">Fərdi</h6>
+                    <a href="{{ url_for('credits') }}">Kreditlər</a>
+                    <a href="">Sual-cavab</a>
+                    <a href="">İpoteka</a>
+                    <a href="">Əmanətlər</a>
+                    <a href="">Faydalı linklər</a>
+                    <a href="{{ url_for('cards') }}">Kartlar</a>
+                    <a href="">Pul köçürmələri</a>
+                    <a href="">Cari hesab</a>
+                    <a href="">Elektron xidmətlər</a>
+                    <a href="">Bank 24/7</a>
+                    <a href="">Keşbek</a>
+                    <a href="{{ url_for('company') }}">Kampaniyalar</a>
+                </div>
+                <div class="col d-flex flex-column">
+                    <h6 class="mb-3">Haqqımızda</h6>
+                    <a href="#">Missiya və strateji baxış</a>
+                    <a href="#">Tender elanları</a>
+                    <a href="#">Rəhbərlik</a>
+                    <a href="#">Məlumatların açıqlanması</a>
+                    <a href="#">Brend mərkəzi</a>
+                    <a href="#">Törəmə və asılı müəssisələrdə iştirak payı</a>
+                    <a href="#">Müxbir banklar</a>
+                    <a href="#">Maliyyə monitorinqi və komplayns</a>
+                    <a href="#">İnsan Resursları</a>
+                    <a href="#">Korporativ Sosial Məsuliyyət / Sponsorluq</a>
+                    <a href="#">Siyasətlərimiz</a>
+                    <a href="#">Mükafatlar</a>
+                    <a href="#">Təklif və şikayətlər</a>
+                </div>
+                <div class="col d-flex flex-column">
+                    <h6 class="mb-3">Korporativ</h6>
+                    <a href="#">Korporativ kreditlər</a>
+                    <a href="#">Məsafədən hesab aç</a>
+                    <a href="#">Ödəniş kartları</a>
+                    <a href="#">Əməkhaqqı layihəsi</a>
+                    <a href="#">Sənədli əməliyyatlar</a>
+                    <a href="#">Elektron bankçılıq</a>
+                    <a href="#">Köçürmələr</a>
+                    <a href="#">Hesablar</a>
+                    <a href="#">Əmanətlər</a>
+                </div>
+                <div class="col d-flex flex-column">
+                    <h6 class="mb-3">KOB</h6>
+                    <a href="#">Biznes kreditləri</a>
+                    <a href="#">Məsafədən hesab aç</a>
+                    <a href="#">ABB Link</a>
+                    <a href="#">Xidmət paketləri</a>
+                    <a href="#">Ödəniş kartları</a>
+                    <a href="#">Sənədli əməliyyatlar</a>
+                    <a href="#">Köçürmələr</a>
+                    <a href="#">Elektron bankçılıq</a>
+                    <a href="#">Hesablar</a>
+                    <a href="#">Əmanətlər</a>
+                    <a href="#">Sahibkarlar Klubu</a>
+                </div>
+                <div class="col d-flex flex-column">
+                    <h6 class="mb-3">Maliyyə və İnvestisiya</h6>
+                    <a href="#">Hesabatlar</a>
+                    <a href="#">Səhmdarlar</a>
+                    <a href="#">Reytinqlər</a>
+                    <a href="#">Təqdimatlar</a>
+                    <a href="#">Digər məlumatlar</a>
+                </div>
+                <div class="col d-flex flex-column">
+                    <h6 class="mb-3">Əlaqə</h6>
+                    <a href="#">Nizami küç. 67, AZ1005 Bakı, Azərbaycan</a>
+                    <a href="#">Tel.: (+994 12) 493 00 91</a>
+                    <a href="#">Faks: (+994 12) 493 40 91</a>
+                    <a href="#">E-poçt: info@abb-bank.az</a>
+                    <a class="text-dark" href="tel:937">
+                        <h5><i class="fa-solid fa-phone"></i> 937</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 d-flex justify-content-around">
+                    <a href="" class="d-flex justify-content-center align-items-center p-2 px-3 rounded shadow-sm" style="width: fit-content; background-color: #ECECEC;">
+                        <i class="fa-brands fa-apple h4 mr-2 "></i>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <small class="p-0 m-0" style="font-size: 8px; font-weight: bold;">Mobil tətbiqi yüklə</small>
+                            <small class="p-0 m-0" style="font-weight: bold;">App Store</small>
+                        </div>
+                    </a>
+                    <a href="" class="d-flex justify-content-center align-items-center p-2 px-3 rounded shadow-sm" style="width: fit-content; background-color: #ECECEC;">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <small class="p-0 m-0" style="font-size: 8px; font-weight: bold;">Mobil tətbiqi yüklə</small>
+                            <small class="p-0 m-0" style="font-weight: bold;">Google Play</small>
+                        </div>
+                    </a>
+                    <a href="" class="d-flex justify-content-center align-items-center p-2 px-3 rounded shadow-sm" style="width: fit-content; background-color: #ECECEC;">
+                        <i class="fa-brands fa-envira"></i>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <small class="p-0 m-0" style="font-size: 8px; font-weight: bold;">Mobil tətbiqi yüklə</small>
+                            <small class="p-0 m-0" style="font-weight: bold;">App Galery</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                   <small class="text-muted">© ABB - Bütün hüquqlar qorunur</small>
+                </div>
+                <div class="col-md-2 d-flex justify-content-around align-items-center mx-auto">
+                    <a href="">
+                        <img width="30" src="https://abb-bank.az/img/logo-infobank.webp" alt="">
+                    </a>
+                    <a href="">
+                        <img width="40" src="https://abb-bank.az/img/logo-virtual-qarabag.webp" alt="">
+                    </a>
+                    <a href="">
+                        <img width="40" src="https://abb-bank.az/img/yenilogo.webp" alt="">
+                    </a>
+                    <a href="">
+                        <img width="50" src="https://abb-bank.az/img/logo-msp.webp" alt="">
+                    </a>
+                </div>
+                <div class="col-md-2 d-flex justify-content-between">
+                    <a href=""><i class="h5 fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="h5 fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="h5 fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="h5 fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="h5 fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script>
+        // Menu links
+        // Kod 1
+        document.getElementById("menu1Hover").addEventListener("mouseover", function() {
+            document.getElementById("menu1").style.display = "flex";
+        });
+
+        document.getElementById("menu1Hover").addEventListener("mouseout", function() {
+            setTimeout(function() {
+                document.getElementById("menu1").style.display = "none";
+            }, 500);
+        });
+
+        // Kod 2
+        document.getElementById("menu2Hover").addEventListener("mouseover", function() {
+            document.getElementById("menu2").style.display = "flex";
+        });
+
+        document.getElementById("menu2Hover").addEventListener("mouseout", function() {
+            setTimeout(function() {
+                document.getElementById("menu2").style.display = "none";
+            }, 500);
+        });
+
+        // Kod 3
+        document.getElementById("menu3Hover").addEventListener("mouseover", function() {
+            document.getElementById("menu3").style.display = "flex";
+        });
+
+        document.getElementById("menu3Hover").addEventListener("mouseout", function() {
+            setTimeout(function() {
+                document.getElementById("menu3").style.display = "none";
+            }, 500);
+        });
+
+        // Kod 4
+        document.getElementById("menu4Hover").addEventListener("mouseover", function() {
+            document.getElementById("menu4").style.display = "flex";
+        });
+
+        document.getElementById("menu4Hover").addEventListener("mouseout", function() {
+            setTimeout(function() {
+                document.getElementById("menu4").style.display = "none";
+            }, 500);
+        });
+
+        // Kod 5
+        document.getElementById("menu5Hover").addEventListener("mouseover", function() {
+            document.getElementById("menu5").style.display = "flex";
+        });
+
+        document.getElementById("menu5Hover").addEventListener("mouseout", function() {
+            setTimeout(function() {
+                document.getElementById("menu5").style.display = "none";
+            }, 500);
+        });
+    </script>
+  </body>
+</html>

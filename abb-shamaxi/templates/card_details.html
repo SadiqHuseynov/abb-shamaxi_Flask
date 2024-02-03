@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="background: #FFECA7;" class="py-5 mb-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-5 ml-auto">
+                <img class="w-100" src="{{ kart_detali.sekil }}">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-around">
+                <h3>{{ kart_detali.ad }}</h3>
+                <p>{{ kart_detali.aciqlama }}</p>
+                <p>{{ kart_detali.nece_il }} illik kart xidmətinin qiyməti <span class="h3 ml-3">| {{ kart_detali.qiymet }}₼</span></p>
+                <a href="" class="btn btn-outline-dark px-4 py-2" style="width: fit-content;">Sifariş et</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-5" style="background: url('https://abb-bank.az/img/icons/logo-ibar-right-bg.svg') no-repeat right top/cover;
+    ">
+    <h2 class="pb-5">İmkanlar</h2>
+    <div class="row mb-5">
+        <div class="col-md-4 my-5">
+            <span class="bg-primary h3 px-3 rounded text-white">1</span>
+            <p class="h5 mt-4">{{ kart_detali.imkan1 }}</p>
+        </div>
+        <div class="col-md-4 my-5">
+            <span class="bg-primary h3 px-3 rounded text-white">2</span>
+            <p class="h5 mt-4"><a href="">{{ kart_detali.imkan1 }}</a></p>
+        </div>
+        <div class="col-md-4 my-5">
+            <span class="bg-primary h3 px-3 rounded text-white">3</span>
+            <p class="h5 mt-4">{{ kart_detali.imkan1 }}</p>
+        </div>
+        <div class="col-md-4 my-5">
+            <span class="bg-primary h3 px-3 rounded text-white">4</span>
+            <p class="h5 mt-4">{{ kart_detali.imkan1 }}</p>
+        </div>
+        <div class="col-md-4 my-5">
+            <span class="bg-primary h3 px-3 rounded text-white">5</span>
+            <p class="h5 mt-4">{{ kart_detali.imkan1 }}</p>
+        </div>
+        <div class="col-md-4 my-5">
+            <span class="bg-primary h3 px-3 rounded text-white">6</span>
+            <p class="h5 mt-4"><a href="">{{ kart_detali.imkan1 }}</a></p>
+        </div>
+    </div>
+    <p>1 İkiqat “ƏDV geri al”-dan yararlanmaq üçün ABB mobile tətbiqində “2xEdv geri al” funksiyasını aktivləşdirin. TamKartla həyata keçirdiyiniz nağdsız ödəniş qəbzlərini əməliyyatdan sonrakı 24 saat ərzində ABB mobile tətbiqində oxudun. Bir ay ərzində qazanıla bilən maksimum ƏDV məbləği 50 AZN-dir.</p>
+    <p>2 a) Tam DigiCard ilə ABB mobile-da Faydalı keşbek paketlərindən birini seçərək, paketdaxili kateqoriyalardan yüksək keşbek qazanacaqsınız. ABB mobile-da Faydalı keşbek paketi seçimi etidiyiniz zaman TamKartla bütün ödənişlərə minimum 1% keşbek hesablanması dayandırılacaq. Faydalı keşbek paket seçimi etmədiyiniz təqdirdə, ödənişlərinizdən 1% keşbek qazanmağa davam edə bilərsiniz; b) Faydalı keşbek üçün aylıq limit 100 AZN-dir. Topladığınız Faydalı keşbek-lər anında ABB mobile-da keşbek balansınıza köçürüləcək.</p>
+    <p>3 Nağdlaşdırma və bütün kartlara köçürmə limiti birlikdə aylıq 7 000 AZN-dək pulsuzdur, 7 000 AZN-dən yuxarı isə 1% (min. 1 AZN və ya ekv.) komissiya tutulur.</p>
+    <p>4 Qalığa faiz vəsaitin minimum 200 AZN-dən maksimum 2 500 AZN-dək hissəsinə və yalnız AZN valyutalı kartlarda hesablanır.</p>
+    <p>5 Mədaxil məbləği 3 000 AZN-dən çox olduqda 0.5% komissiya hesablanır (AZN/USD/EUR).</p>
+</div>
+<div class="container my-5">
+    <h2>Tariflər</h2>
+    <div class="row mt-5">
+        <div style="border-bottom: 1px solid #ccc" class="row col-12 mt-3">
+            <div class="col-md-6 h5 py-3">
+                Müddət
+            </div>
+            <div class="col-md-6 h5 py-3">
+                5 ilədək
+            </div>
+        </div>
+        <div style="border-bottom: 1px solid #ccc" class="row col-12 mt-3">
+            <div class="col-md-6 h5 py-3">
+                Eyni kartla ay ərzində qazanılan maksimal Faydalı keşbək məbləği
+            </div>
+            <div class="col-md-6 h5 py-3">
+                Tətbiq daxili ödənişlər üçün 50 AZN olmaqla, toplam 100 AZN
+            </div>
+        </div>
+        <div style="border-bottom: 1px solid #ccc" class="row col-12 mt-3">
+            <div class="col-md-6 h5 py-3">
+                SMS xəbərdarlıq
+            </div>
+            <div class="col-md-6 h5 py-3">
+                Pulsuz
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ getData.name }}
+{% endblock title %}
+
+{% block content %}
+    <div style="background: url('https://abb-bank.az/img/icons/logo-ibar-right-bg.svg') no-repeat right top;
+    ">
+        <div class="container py-5">
+            <div class="row mx-auto">
+                <div class="col-md-2">
+                    <a href="/company">Geri qayıtmaq <br> <i class="fa-solid fa-arrow-left-long h6"></i></a>
+                </div>
+                <div class="col-md-8 mr-auto row">
+                    <h2>{{ getData.name }}</h2>
+                    <img src="{{ getData.poster }}" class="rounded my-5 w-100">
+                    <div align="justify">{{ getData.text }}</div>
+                    <br>
+                    {% if getData.button_name != None %}
+                    <a href="{{ getData.button_link }}" class="btn btn-success mt-4 mx-auto py-2">{{ getData.button_name }}</a>
+                    {% endif %}
+                </div>    
+            </div>    
+        </div>
+    </div>    
+{% endblock content %}

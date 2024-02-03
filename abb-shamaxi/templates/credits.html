@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}
+Kredit ABB | Serfeli Kredit Şertleri | Nagd Pul Krediti ✔️
+{% endblock title %}
+
+{% block content %}
+<div style="background-color: #7256C1">
+    <div class="container py-5" style="background: url('https://abb-bank.az/storage/uploads/files/1597833033_kredit.png?v=294') no-repeat right top">
+        <div class="row text-white">
+            <div class="col-md-3">
+                <h1 class="mt-5 pb-4">Kreditlər</h1>
+            </div>
+            <div class="col-md-5">
+                <p class="mt-5 pb-4">ABB-dən hər kəsə sərfəli şərtlərlə kreditlər. Kreditinizi rahat şəkildə ABB vasitəsilə onlayn sifariş edə bilərsiniz.</p>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="container mt-5">
+    <div class="row">
+        {% for getCredit in getCredits %}
+        <div class="col-md-10 row mx-auto mb-5">
+            <div class="col-md-5">
+                <img class="w-100 rounded" src="{{ getCredit.sekil }}">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-between">
+                <div>
+                    <h3>{{ getCredit.ad }}</h3>
+                    <p>{{ getCredit.kicik_aciqlama }}</p>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5 class="m-0">{{ getCredit.max_mebleg }} ₼</h5>
+                            <span style="font-size: 12px">Maksimal məbləğ</span>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 class="m-0">{{ getCredit.muddet }} ayadək</h5>
+                            <span style="font-size: 12px">Müddət</span>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 class="m-0">{{ getCredit.faiz_derecesi }}%-dən</h5>
+                            <span style="font-size: 12px">Faiz dərəcəsi</span>
+                        </div>
+                        <div class="col-md-5 mt-4">
+                            <a href="credits/credits_detail/{{ getCredit.id }}" class="btn btn-outline-dark p-2 px-4">Müraciət etmək</a>
+                        </div>
+                        <div class="col-md-4 mt-4">
+                            <a href="credits/credits_detail/{{ getCredit.id }}">Daha ətraflı <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% for getCredit2 in getCredits2 %}
+        <div class="col-md-10 row mx-auto my-5">
+            <div class="col-md-5">
+                <img class="w-100 rounded" src="{{ getCredit2.sekil }}">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-between">
+                <div>
+                    <h3>{{ getCredit2.ad }}</h3>
+                    <p>{{ getCredit2.kicik_aciqlama }}</p>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-md-4 mt-4">
+                            <a href="credits/credits_detail_2/{{ getCredit2.id }}">Daha ətraflı <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div style="background: #F8F8F8" class="pt-5 mb-5">
+    <div class="container py-5">
+        <h2 class="mb-5">Tez-tez verilən suallar</h2>
+        <div class="row">
+            <div class="col-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="card border">
+                      <div class="card-header d-flex justify-content-between" id="headingOne">
+                        <h3 style="cursor: pointer" class="mb-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Krediti kim ala bilər?                        
+                        </h3>
+                        <i class="fa-solid fa-chevron-down h3"></i>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Rəsmi gəliri olan, əmək haqqını istənilən bankın kartı ilə alan hər kəs.
+
+                            Hazırda işlədikləri müəssisələrdə iş stajı ən azı 6 ay olan əməkdaşlar.
+                            
+                            Yaşı minimum 20, maksimum – kredit öhdəliyinin sonuncu ödəniş tarixinə 70 yaşı olanlar.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header d-flex justify-content-between" id="headingTwo">
+                          <h3 style="cursor: pointer" class="mb-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            Kredit almaq üçün nə lazımdır?                       
+                          </h3>
+                          <i class="fa-solid fa-chevron-down h3"></i>
+                        </div>
+                    
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                          <div class="card-body">
+                            Rəsmi iş yerinizin olması kifayətdir. Əmək haqqı kartınızın ABB bankdan və ya digər banklardan olmasının fərqi yoxdur.
+                          </div>
+                        </div>
+                      </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

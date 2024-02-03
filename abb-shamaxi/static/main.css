@@ -1,0 +1,26 @@
+.hidden-header{
+    background-color: #F6F7F8;
+    color: #666666;
+    font-size: 13px;
+}
+.hidden-header a{
+    color: #666;
+}
+.career-portal{
+    border-radius: 20px;
+}
+#links a{
+    color: #333;
+}
+#banner{
+    background: linear-gradient(#E1EBFF,#AFB9CD);
+}
+.footer a {
+    color: #555;
+    margin: 5px 0;
+    font-size: 14px;
+}
+/**/
+.showMenu:hover{
+    display: flex !important;
+}

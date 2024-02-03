@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ getCreditDetail.ad }}{% endblock title %}
+
+{% block content %}
+<div class="pt-5" style="background: url('https://abb-bank.az/img/icons/logo-ibar-right-bg.svg') no-repeat right top;
+    ">
+    <div class="container py-5">
+        <div class="col-md-8 mx-auto">
+            <h1 class="text-primary mb-5">{{ getCreditDetail.ad }}</h1>
+            <div class="row">
+                <div class="col-12 mx-auto">
+                    <p>{{ getCreditDetail.aciqlama }}</p>
+                    <img src="{{ getCreditDetail.sekil }}" class="w-100 mt-5">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+{% endblock content %}

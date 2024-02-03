@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Online Kart Sifarişi - Debet və Kredit kart -  ABB Bank Kartları
+{% endblock title %}
+
+{% block content %}
+<div style="background: #EDEFF0">
+    <div class="container py-5">
+        <div class="row d-flex justify-content-around">
+            {% for debet_karti in debet_kartlari_limit %}    
+            <div class="bg-white p-3 rounded" style="width: 22rem;">
+                <div class="col-md-10 my-3">
+                    <img src="{{ debet_karti.sekil }}" class="w-100">
+                    <h4 class=" mb-5 mt-3">{{ debet_karti.ad }}</h4>
+                    <span class="bg-success text-white p-1 rounded">{{ debet_karti.qiymet }} AZN</span>
+                    <div class="mt-5">
+                        <a href="cards/debet_cards_details/{{ debet_karti.id }}" class="btn btn-primary px-3 py-2 mr-2">Sifariş et</a>
+                        <a href="cards/debet_cards_details/{{ debet_karti.id }}" class="btn btn-outline-secondary px-3 py-2">Daha ətraflı</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>    
+<div class="container py-5">
+    <h2>Debet kartları</h2>
+    <div class="row mt-5">
+        {% for debet_karti in debet_kartlari %}
+        <div class="col-md-3 mb-4">
+            <a class="text-dark" href="cards/debet_cards_details/{{ debet_karti.id }}">
+                <div>
+                    <img class="w-100" src="{{ debet_karti.sekil }}">
+                    <h5 class="mt-2">{{ debet_karti.ad }}</h5>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <hr>
+    <h2 class="mt-4">Kredit kartları</h2>
+    <div class="row mt-5">
+        {% for kredit_karti in kredit_kartlari %}
+        <div class="col-md-3 mb-4">
+            <a class="text-dark" href="cards/credit_cards_details/{{ kredit_karti.id }}">
+                <div>
+                    <img class="w-100" src="{{ kredit_karti.sekil }}">
+                    <h5 class="mt-2">{{ kredit_karti.ad }}</h5>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>    
+</div>
+<div style="background: #F8F8F8" class="pt-5 mb-5">
+    <div class="container py-5">
+        <h2 class="mb-5">Tez-tez verilən suallar</h2>
+        <div class="row">
+            <div class="col-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="card border">
+                      <div class="card-header d-flex justify-content-between" id="headingOne">
+                        <h3 style="cursor: pointer" class="mb-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Hansı növ kartlar mövcuddur?                       
+                        </h3>
+                        <i class="fa-solid fa-chevron-down h3"></i>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            ABB-dən həm debet həm də kredit kartlarını əldə edə bilərsiniz. Hər bir kart özünəməxsus üstünlüklərə malikdir. Daxili səhifələrinə keçid edərək məlumatlar əldə edə bilərsiniz. 
+                        </div>
+                      </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
